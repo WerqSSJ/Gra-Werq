@@ -37,19 +37,29 @@ namespace Gra_Werq
                 Console.ReadKey();
                 if (status == "a")
                 {
-
+                    Console.Beep();
                     Console.Clear();
                     Console.Write(NazwaPostaci + "_Jest bardzo mądry ale słaby");
                     Console.ReadKey();
+                    
 
                 }
                 else if (status == "b")
                 {
+                    Console.Beep();
                     Console.Clear();
                     Console.WriteLine(NazwaPostaci + "_Jest Przeciętny");
                     Console.ReadKey();
+                    
                 }
+                else if(status == "c")
+                {
+                    Console.Beep();
+                    Console.Clear();
+                    Console.WriteLine(NazwaPostaci + "_Jest Koksem z małym muzgiem");
+                    Console.ReadKey();
 
+                }
             }
             else if (opcja == "2")
             {
