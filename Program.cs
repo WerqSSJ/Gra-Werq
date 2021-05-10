@@ -47,7 +47,7 @@ namespace Gra_Werq
                 {
                     Console.Clear();
                     Console.WriteLine(NazwaPostaci + "_Jest Przeciętny");
-
+                    Console.ReadKey();
                 }
 
             }
