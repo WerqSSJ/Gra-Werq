@@ -8,13 +8,26 @@ namespace Gra_Werq
 {
     class Program
     {
+        private static string nazwaPostaci;
+
         static void Main(string[] args)
         {
+            nazwaPostaci = "Werq";
+
+            ObsługaMenu();
+
+            Console.ReadLine();
+            
+
+        }
+
+        static void ObsługaMenu()
+        { 
             Console.WriteLine("Wersja prubna");
             Console.ReadKey();
             Console.Clear();
 
-            string NazwaPostaci;
+            
             Console.WriteLine("Witaj");
             Console.WriteLine("1. Nowa Gra");
             Console.WriteLine("2. Wczytaj Zapis");
@@ -22,12 +35,12 @@ namespace Gra_Werq
 
             string opcja = Console.ReadLine();
             string status = Console.ReadLine();
-
+    
             if (opcja == "1")
             {
                 Console.Clear();
                 Console.Write("Imię  Postaci to: ");
-                NazwaPostaci = Console.ReadLine();
+                nazwaPostaci = Console.ReadLine();
                 Console.ReadKey();
 
                 Console.WriteLine("Jaka twoja Postac ma byc ?");
@@ -37,29 +50,30 @@ namespace Gra_Werq
                 Console.ReadKey();
                 if (status == "a")
                 {
-                    Console.Beep();
                     Console.Clear();
-                    Console.Write(NazwaPostaci + "_Jest bardzo mądry ale słaby");
+                    Console.Write(nazwaPostaci + "Jest bardzo mądry ale słaby");
+                    Console.ReadLine();
                     Console.ReadKey();
-                    
-
+                  
                 }
                 else if (status == "b")
                 {
-                    Console.Beep();
                     Console.Clear();
-                    Console.WriteLine(NazwaPostaci + "_Jest Przeciętny");
-                    Console.ReadKey();
-                    
-                }
-                else if(status == "c")
-                {
-                    Console.Beep();
-                    Console.Clear();
-                    Console.WriteLine(NazwaPostaci + "_Jest Koksem z małym muzgiem");
+                    Console.WriteLine(nazwaPostaci + "Jest Przeciętny");
+                    Console.ReadLine();
                     Console.ReadKey();
 
                 }
+                else if (status == "c")
+                {
+                    Console.Clear();
+                    Console.WriteLine(nazwaPostaci + "Jest Koksem z małym muzgiem");
+                    Console.ReadLine();
+                    Console.ReadKey();
+                }
+
+                Console.Clear();
+                Console.WriteLine("Początek przygody zaczyna sie Angielskim mieśćie Whitby. Gdzie zaczyna się życie naszego bohatera ");
             }
             else if (opcja == "2")
             {
@@ -68,7 +82,7 @@ namespace Gra_Werq
             }
             else
             {
-                Console.Clear();
+                Console.Clear();    
                 Console.WriteLine("Dzęks za test");
             }
 
